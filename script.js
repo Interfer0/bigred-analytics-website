@@ -59,15 +59,19 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe all sections
-document.querySelectorAll('section').forEach(section => {
-    section.style.opacity = '0';
-    section.style.transform = 'translateY(30px)';
-    section.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+// Observe all sections except hero (which should be visible immediately)
+const sections = document.querySelectorAll('section');
+sections.forEach((section, index) => {
+    // Only hide non-hero sections initially
+    if (index > 0) {
+        section.style.opacity = '0';
+        section.style.transform = 'translateY(30px)';
+        section.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+    }
     observer.observe(section);
 });
 
-// Make first section visible immediately
+// Make home section visible immediately
 document.querySelector('#home').style.opacity = '1';
 document.querySelector('#home').style.transform = 'translateY(0)';
 
