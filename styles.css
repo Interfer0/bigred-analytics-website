@@ -20,27 +20,39 @@ body {
 
 /* Desktop container */
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 15px !important;
+    box-sizing: border-box !important;
 }
 
-/* Mobile containers - FORCE all elements to fit */
+/* Emergency mobile fixes - override everything */
 @media (max-width: 768px) {
     * {
-        box-sizing: border-box;
+        box-sizing: border-box !important;
     }
     
     body {
-        overflow-x: hidden;
-        width: 100%;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow-x: hidden !important;
+    }
+    
+    html {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
     }
     
     .container {
-        max-width: 100%;
-        padding: 0 10px;
-        width: 100%;
-        margin: 0;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 10px !important;
     }
 }
 
@@ -151,14 +163,16 @@ p {
 }
 
 .nav-container {
-    width: 100%;
-    margin: 0;
-    padding: 0 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 60px;
-    box-sizing: border-box;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 10px !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    height: 50px !important;
+    box-sizing: border-box !important;
+    overflow: visible !important;
 }
 
 .nav-logo {
@@ -176,9 +190,19 @@ p {
 }
 
 .nav-menu {
-    display: flex;
-    list-style: none;
-    gap: 30px;
+    display: flex !important;
+    list-style: none !important;
+    gap: 15px !important;
+    flex-wrap: wrap !important;
+    overflow: visible !important;
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        width: 100% !important;
+        justify-content: center !important;
+        gap: 10px !important;
+    }
 }
 
 .nav-link {
@@ -209,9 +233,13 @@ p {
 }
 
 .hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
+    display: flex !important;
+    flex-direction: column !important;
+    cursor: pointer !important;
+    z-index: 1001 !important;
+    position: fixed !important;
+    right: 10px !important;
+    top: 10px !important;
 }
 
 .bar {
@@ -233,9 +261,12 @@ p {
 
 .hero-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    align-items: center;
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+    align-items: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 10px !important;
 }
 
 .hero-text {
@@ -388,10 +419,12 @@ p {
 
 .about-content {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 40px;
-    align-items: center;
-    width: 100%;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    align-items: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 10px !important;
 }
 
 .about-text h2 {
@@ -685,38 +718,51 @@ body {
     overflow-x: hidden;
 }
 
-/* Responsive Design */
+/* EMERGENCY MOBILE FIXES - FORCE FIT */
 @media (max-width: 768px) {
-    body {
-        width: 100%;
-        max-width: 100%;
-        overflow-x: hidden;
+    body, html {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow-x: hidden !important;
+        font-size: 14px !important;
+    }
+    
+    * {
+        max-width: 100% !important;
+        overflow-x: hidden !important;
     }
     
     .hamburger {
-        display: flex;
-        margin-left: 0;
+        display: flex !important;
+        margin-left: 0 !important;
     }
 
     .nav-container {
-        padding: 0 10px;
-        width: 100%;
-        height: 60px;
+        padding: 0 5px !important;
+        width: 100% !important;
+        height: 50px !important;
+        max-width: 100% !important;
     }
 
     .nav-logo {
-        font-size: 1.2rem;
+        font-size: 1rem !important;
+        max-width: 100% !important;
     }
 
     .nav-menu {
-        padding: 15px 0;
-        width: 100%;
+        padding: 10px 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
     }
 
     .nav-menu li {
-        margin: 10px 0;
-        padding: 0 8px;
-        text-align: center;
+        margin: 8px 0 !important;
+        padding: 0 5px !important;
+        text-align: center !important;
+        max-width: 100% !important;
+        white-space: normal !important;
     }
 
     .about-content {
@@ -992,6 +1038,43 @@ html {
 
 .notification.show {
     transform: translateX(0);
+}
+
+/* EMERGENCY MOBILE OVERRIDE */
+@media (max-width: 768px) {
+    body, html {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow-x: hidden !important;
+    }
+    
+    * {
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+        box-sizing: border-box !important;
+    }
+    
+    .container {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 5px !important;
+    }
+    
+    .about-content {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 5px !important;
+        gap: 20px !important;
+    }
+    
+    .nav-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 5px !important;
+    }
 }
 
 /* Print styles */
