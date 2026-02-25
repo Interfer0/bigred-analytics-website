@@ -364,6 +364,10 @@ p {
 .about-text p {
     margin-bottom: 20px;
     color: #666;
+    line-height: 1.6;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .about-highlights {
@@ -638,6 +642,35 @@ p {
         display: flex;
     }
 
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .about-text h2 {
+        text-align: center;
+    }
+
+    .about-text p {
+        font-size: 16px;
+        line-height: 1.7;
+        margin-bottom: 20px;
+    }
+
+    .about-highlights {
+        gap: 15px;
+    }
+
+    .highlight-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+    }
+
+    .highlight-item span {
+        font-size: 14px;
+    }
+
     .nav-menu {
         position: fixed;
         left: -100%;
@@ -730,6 +763,30 @@ p {
     h2 {
         font-size: 1.5rem;
         margin-bottom: 2rem;
+    }
+
+    .about-text h2 {
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .about-text p {
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+
+    .about-highlights {
+        gap: 12px;
+        margin-top: 20px;
+    }
+
+    .highlight-item i {
+        font-size: 1.2rem;
+    }
+
+    .highlight-item span {
+        font-size: 13px;
     }
 
     .hero-buttons {
