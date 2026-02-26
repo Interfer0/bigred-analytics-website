@@ -85,23 +85,23 @@ if (ctx) {
             datasets: [{
                 label: 'Engagement Rate',
                 data: [3.2, 4.1, 3.8, 5.2, 6.1, 7.3],
-                borderColor: 'rgba(102, 126, 234, 1)',
-                backgroundColor: 'rgba(102, 126, 234, 0.1)',
+                borderColor: '#dc143c',
+                backgroundColor: 'rgba(220, 20, 60, 0.1)',
                 fill: true,
                 tension: 0.4,
-                pointBackgroundColor: 'rgba(102, 126, 234, 1)',
-                pointBorderColor: '#fff',
+                pointBackgroundColor: '#dc143c',
+                pointBorderColor: '#000000',
                 pointBorderWidth: 2,
                 pointRadius: 5
             }, {
                 label: 'Growth',
                 data: [2.5, 3.2, 3.0, 4.1, 5.0, 6.1],
-                borderColor: 'rgba(118, 75, 162, 1)',
-                backgroundColor: 'rgba(118, 75, 162, 0.1)',
+                borderColor: '#8b0000',
+                backgroundColor: 'rgba(139, 0, 0, 0.1)',
                 fill: true,
                 tension: 0.4,
-                pointBackgroundColor: 'rgba(118, 75, 162, 1)',
-                pointBorderColor: '#fff',
+                pointBackgroundColor: '#8b0000',
+                pointBorderColor: '#000000',
                 pointBorderWidth: 2,
                 pointRadius: 5
             }]
@@ -116,7 +116,8 @@ if (ctx) {
                         usePointStyle: true,
                         padding: 20,
                         font: {
-                            size: 12
+                            size: 12,
+                            color: '#ffffff'
                         }
                     }
                 }
@@ -125,11 +126,12 @@ if (ctx) {
                 y: {
                     beginAtZero: true,
                     grid: {
-                        color: 'rgba(0, 0, 0, 0.05)'
+                        color: 'rgba(0, 0, 0, 0.1)'
                     },
                     ticks: {
                         font: {
-                            size: 11
+                            size: 11,
+                            color: '#ffcccc'
                         }
                     }
                 },
@@ -139,7 +141,8 @@ if (ctx) {
                     },
                     ticks: {
                         font: {
-                            size: 11
+                            size: 11,
+                            color: '#ffcccc'
                         }
                     }
                 }
